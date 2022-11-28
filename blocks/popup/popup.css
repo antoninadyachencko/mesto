@@ -1,0 +1,22 @@
+.popup {
+  display: none;
+  position: fixed;
+  top:35%;
+  z-index: 2;
+  font-family: 'inter', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+:where(.open).popup {
+  display: block;
+}
+
+@media screen and (max-width:614px) {
+  .popup {
+    top: 23%;
+  }
+}
+

@@ -1,0 +1,15 @@
+.elements__item-like-button {
+    padding: 0;
+    width: 22px;
+    height: 19px;
+    background-image: url(../../../image-sprint-4/like.svg);
+    border: none;
+    background-color: transparent;
+    transition: .3s;
+    outline: none;
+  }
+  
+  .elements__item-like-button:hover {
+    opacity: .5;
+    cursor: pointer;
+  }
