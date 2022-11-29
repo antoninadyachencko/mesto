@@ -4,7 +4,7 @@
   border-radius: 2px;
   box-sizing: border-box;
   cursor: pointer;
-  background-image: url('../../../image-sprint-4/button-plus.png');
+  background-image: url('../../../images/button-plus.png');
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
@@ -14,8 +14,17 @@
 
 @media screen and (max-width: 614px) {
   .profile__add-button {
-    width: 282px;
+    width: 80px;
     margin-top: 36px;
+    align-self: self-start;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .profile__add-button {
+    width: 282px;
+    margin: 0;
+    align-self: center;
     background-size: 16px 16px;
   }
 }

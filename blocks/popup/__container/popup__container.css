@@ -2,10 +2,15 @@
   width: 430px;
   height: 330px;
   justify-content: space-between;
-  position: relative;
   padding: 34px 36px 37px;
   background-color: #FFFFFF;
   border-radius: 10px;
+  position: fixed;
+  z-index: 2;
+  font-family: 'inter', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  border: 1px solid black;
   box-sizing: border-box;
 
 }
@@ -14,6 +19,7 @@
   .popup__container {
     width: 282px;
     height: 322px;
+    top: 23%;
     padding: 25px 22px;
   }
 }

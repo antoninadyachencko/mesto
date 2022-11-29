@@ -3,7 +3,8 @@ let profileDescription = "Исследователь океана";
 
 function openPopup() {
     const popup = document.querySelector(".popup");
-    popup.classList.add("open"); 
+    popup.classList.add("popup_open"); 
+
 
     document.querySelector(".form__text-name").textContent = profileName;
     document.querySelector(".form__text-description").textContent = profileDescription; 
@@ -11,7 +12,7 @@ function openPopup() {
 
 function closePopup() {
     const popup = document.querySelector(".popup");
-    popup.classList.remove("open"); 
+    popup.classList.remove("popup_open"); 
 }
 
 function refreshData() {
@@ -39,6 +40,19 @@ window.addEventListener("load", () => {
     const formElement = document.querySelector(".form");
     formElement.addEventListener("submit", onSubmit);
 
+    const likes = document.querySelectorAll(".elements__item-like-button");
+    likes.forEach(x => x.addEventListener("click", toggleLike));
+    
     refreshData();
 });
 
+function toggleLike() {
+    this.classList.toggle("element__like-button_active");
+}
+
+const likes = document.querySelectorAll(".elements__item-like-button");
+likes.forEach(x => x.addEventListener("click", toggleLike));
+
+
+
+ 
