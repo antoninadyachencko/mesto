@@ -5,7 +5,8 @@
   border-radius: 2px;
   font-size: 18px;
   line-height: 22px;
-  margin-top: 18px;
+  box-sizing: border-box;
+  margin-top: 48px;
   text-align: center;
   color: #FFFFFF;
   border: none;
@@ -21,8 +22,9 @@
   .form__button-save  {
     font-size: 14px;
     line-height: 17px;
+    position: absolute;
     width: 238px;
     height: 46px;
-    margin-top: 15px;
+    margin-top: 159px;
   }
 }
