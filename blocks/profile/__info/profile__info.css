@@ -1,13 +1,10 @@
 .profile__info {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: auto;
-  max-width: 336px;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-@media screen and (max-width:568px) {
+@media screen and (max-width:660px) {
   .profile__info {
-    width: 100%;
     text-align: center;
   }
- }
+}

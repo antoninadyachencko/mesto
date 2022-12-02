@@ -3,8 +3,8 @@
     align-items: baseline;
 }
 
-@media screen and (max-width:568px) {
+@media screen and (max-width:660px) {
   .profile__info-block {
     margin-left: 65px;
-    }
+  }
 }

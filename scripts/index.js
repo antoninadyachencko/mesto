@@ -1,57 +1,38 @@
-let profileName = "Жак-Ив Кусто";
-let profileDescription = "Исследователь океана";
+const popup = document.querySelector(".popup");
+const popupName = document.querySelector(".form__text-input[name='name']");
+const popupDescription = document.querySelector(".form__text-input[name='description']");
+const profileName = document.querySelector(".profile__title");
+const profileDescription = document.querySelector(".profile__description");
 
 function openPopup() {
-    const popup = document.querySelector(".popup");
-    popup.classList.add("popup_open"); 
-
-
-    document.querySelector(".form__text-name").textContent = profileName;
-    document.querySelector(".form__text-description").textContent = profileDescription; 
+  popup.classList.add("popup_open"); 
+  popupName.value = profileName.textContent;
+  popupDescription.value = profileDescription.textContent;
 }
 
 function closePopup() {
-    const popup = document.querySelector(".popup");
-    popup.classList.remove("popup_open"); 
-}
-
-function refreshData() {
-    document.querySelector(".profile__title").textContent = profileName;
-    document.querySelector(".profile__description").textContent = profileDescription;
+  popup.classList.remove("popup_open");
 }
 
 function onSubmit(evt) {
-    evt.preventDefault();
-
-    profileName = document.querySelector(".form__text-name").value;
-    profileDescription = document.querySelector(".form__text-description").value;
-
-    refreshData();
-    closePopup();
+  evt.preventDefault();
+  profileName.textContent = popupName.value;
+  profileDescription.textContent = popupDescription.value
+  closePopup();
 }; 
 
 window.addEventListener("load", () => {
-    const buttonEdit = document.querySelector(".profile__edit-button");
-    buttonEdit.addEventListener("click", openPopup);
+  const buttonEdit = document.querySelector(".profile__edit-button");
+  buttonEdit.addEventListener("click", openPopup);
  
-    const modalCloseButton = document.querySelector(".popup__button-close");  
-    modalCloseButton.addEventListener("click", closePopup);
+  const modalCloseButton = document.querySelector(".popup__button-close");  
+  modalCloseButton.addEventListener("click", closePopup);
 
-    const formElement = document.querySelector(".form");
-    formElement.addEventListener("submit", onSubmit);
-
-    const likes = document.querySelectorAll(".elements__item-like-button");
-    likes.forEach(x => x.addEventListener("click", toggleLike));
-    
-    refreshData();
+  const formElement = document.querySelector(".form");
+  formElement.addEventListener("submit", onSubmit);
 });
 
-function toggleLike() {
-    this.classList.toggle("element__like-button_active");
-}
 
-const likes = document.querySelectorAll(".elements__item-like-button");
-likes.forEach(x => x.addEventListener("click", toggleLike));
 
 
 

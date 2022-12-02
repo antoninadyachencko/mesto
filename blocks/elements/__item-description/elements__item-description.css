@@ -1,6 +1,7 @@
 .elements__item-description {
   max-width: 246px;
-  padding:25px 21px 31px 20px;
+  padding:0;
+  margin: 25px 21px 31px 20px;
   width: 100%;
   display: flex;
   justify-content: space-between;

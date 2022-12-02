@@ -1,12 +1,12 @@
 .elements__list {
-display: flex;
-background: #FFFFFF;
-list-style-type: none;
-border-radius: 10px;
-height: 361px;
-width: 282px;
-align-items: center;
-flex-direction: column;
-box-sizing: border-box;
-overflow: hidden;
+  display: flex;
+  background: #FFFFFF;
+  list-style-type: none;
+  border-radius: 10px;
+  height: 361px;
+  width: 282px;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
 }
