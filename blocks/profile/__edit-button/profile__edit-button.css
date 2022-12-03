@@ -22,7 +22,7 @@
   }
 }
   
-  .profile__edit-button:hover {
-    opacity: .8;
-    cursor: pointer;
-  }
+.profile__edit-button:hover {
+  opacity: .8;
+  cursor: pointer;
+}

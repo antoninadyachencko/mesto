@@ -29,5 +29,5 @@
 @import url(../blocks/popup/__button-close/popup__button-close.css);
 @import url(../blocks/form/__text-input/form__text-input.css);
 @import url(../blocks/form/__button-save/form__button-save.css);
-@import url(../blocks/elements/__item-like-button/_active/element__like-button_active.css);
+@import url(../blocks/elements/__item-like-button/_active/element__item-like-button_active.css);
 @import url(../blocks/profile/__info-block/profile__info-block.css);

@@ -4,6 +4,7 @@
   border-radius: 2px;
   box-sizing: border-box;
   cursor: pointer;
+  transition: opacity .3s ease;
   background-image: url('../../../images/button-plus.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -24,5 +25,4 @@
 
 .profile__add-button:hover {
   opacity: .7;
-  transition: opacity .3s linear;
 }
