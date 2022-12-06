@@ -30,72 +30,69 @@
 
       <section class="elements">
         <ul class="elements__container">
-          <li class="elements__list">
-            <img class="elements__item" src="./images/Karachaevsk.jpg" alt="Карачаевск крепость">
-            <div class="elements__item-description">
-              <h2 class="elements__item-title">Карачаевск</h2>
-              <button class="elements__item-like-button" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__list">
-            <img class="elements__item" src="./images/Elbrus.jpg" alt="Гора Эльбрус">
-            <div class="elements__item-description">
-              <h2 class="elements__item-title">Гора Эльбрус</h2>
-              <button class="elements__item-like-button" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__list">
-            <img class="elements__item" src="./images/Dombai.jpg" alt="Домбай гора">
-            <div class="elements__item-description">
-              <h2 class="elements__item-title">Домбай</h2>
-              <button class="elements__item-like-button" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__list">
-            <img class="elements__item" src="./images/Elbrus.jpg" alt="Гора Эльбрус">
-            <div class="elements__item-description">
-              <h2 class="elements__item-title">Гора Эльбрус</h2>
-              <button class="elements__item-like-button" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__list">
-            <img class="elements__item" src="./images/Dombai.jpg" alt="Домбай гора">
-            <div class="elements__item-description">
-              <h2 class="elements__item-title">Домбай</h2>
-              <button class="elements__item-like-button" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__list">
-            <img class="elements__item" src="./images/Karachaevsk.jpg" alt="Карачаевск крепость">
-            <div class="elements__item-description">
-              <h2 class="elements__item-title">Карачаево-Черкесия</h2>
-              <button class="elements__item-like-button" type="button"></button>
-            </div>
-          </li>
         </ul>
       </section>
     </main>
-    
+
     <footer class="footer">
       <p class="footer__copyright">&copy;2022 Antonina Diachencko</p>
     </footer>
 
 
-    <div class="popup"> 
+    <section class="popup popup_profile">
       <div class="popup__container">
-        <button class="popup__button-close" type="button" aria-label="Закрыть окно"></button>
+        <button class="popup__button-close popup__button-close_profile" type="button"
+          aria-label="Закрыть окно"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="form" name="profile" id="profile" novalidate autocomplete="off">
-          <input type="text" class="form__text-input" name="name" value="Жак-Ив Кусто"
-            placeholder="Имя">
-
-          <input type="text" class="form__text-input" name="description"
-            value="Исследователь океана" placeholder="Деятельность">
-
-          <button class="form__button-save" type="submit">Сохранить</button>
+        <form class="form form_profile" name="edit-ptofile" novalidate autocomplete="off">
+          <label class="popup__label" for="profile"></label>
+          <input type="text" class="form__text-input" name="profile" id="profile" value="Жак-Ив Кусто" placeholder="Имя"
+            required>
+          <label class="popup__label" for="description"></label>
+          <input type="text" class="form__text-input" name="description" id="description" value="Исследователь океана"
+            placeholder="Деятельность" required>
+          <button class="form__button-save form__button-save_profile" type="submit">Сохранить</button>
         </form>
       </div>
-    </div>
+    </section>
+
+    <section class="popup popup_card">
+      <div class="popup__container">
+        <button class="popup__button-close popup__button-close_card" aria-label="Закрыть окно" type="button"></button>
+        <h2 class="popup__title">Новое место</h2>
+        <form class="form form_card" name="add-elements" novalidate autocomplete="off">
+          <label class="popup__label" for="card-place"></label>
+          <input type="text" class="form__text-input" id="card-place" name="place" value="" placeholder="Название"
+            required>
+          <label class="popup__label" for="card-link"></label>
+          <input type="text" class="form__text-input" id="card-link" name="link" value=""
+            placeholder="Ссылка на картинку" required>
+          <button class="form__button-save form__button-save_card" type="submit">Создать</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="popup popup_images">
+      <div class="popup__container-images">
+        <button id="image-Button" class="popup__button-close popup__button-close_image" type="button"></button>
+        <img class="popup__image" src="#" alt=".">
+        <p class="popup__image-text"></p>
+      </div>
+    </section>
+
+
+    <template id="elements_template">
+      <li class="elements__list">
+        <button class="elements__item-delete-button" aria-label="Удалить" type="button"></button>
+        <img class="elements__item" src="#" alt=".">
+        <div class="elements__item-description">
+          <h2 class="elements__item-title"></h2>
+          <button class="elements__item-like-button" type="button"></button>
+        </div>
+      </li>
+    </template>
+    <div class="gallery"></div>
+
   </div>
   <script src="./scripts/index.js"></script>
 </body>
