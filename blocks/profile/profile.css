@@ -4,6 +4,7 @@
   align-items: center;
   margin-bottom: 51px;
   justify-content: space-between;
+  gap: 30px;
 }
 
 
@@ -18,5 +19,6 @@
   .profile {
     flex-direction: column;
     margin: 0;
+    gap: 0;
   }
 }

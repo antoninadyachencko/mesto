@@ -8,12 +8,13 @@ const nameOutput = document.querySelector('.profile__title');
 const descriptionOutput = document.querySelector('.profile__description');
 
 
+
 const template = document.querySelector('#elements_template').content;
 const elementsContainer = document.querySelector('.elements__container');
 const profileAddButton = document.querySelector('.profile__add-button');
 const popupButtonCloseCard = document.querySelector('.popup__button-close_card');
 const popupAddCard = document.querySelector('.popup_card');
-const popupFormAddCard= document.querySelector('.form_card');
+const popupFormAddCard = document.querySelector('.form_card');
 const placeCardName = document.getElementById('card-place');
 const placeLink = document.getElementById('card-link');
 
@@ -81,7 +82,7 @@ function addCard(event) {
     link: placeLink.value
   }
   popupFormAddCard.reset();
-  renderCard(newCard);
+  render(newCard);
 }
 
 function openCard(click) {
@@ -91,8 +92,7 @@ function openCard(click) {
   popupImageText.innerText = click.target.alt;
 };
 
-
-function renderCard(card) {
+function createCard(card) {
   const newCard = template.cloneNode(true);
   newCard.querySelector('.elements__item-title').textContent = card.name;
   newCard.querySelector('.elements__item').src = card.link;
@@ -112,17 +112,19 @@ function renderCard(card) {
 
   const elementsImage = newCard.querySelector('.elements__item');
   elementsImage.addEventListener('click', openCard);
-  const gallery = document.querySelector('gallery');
-
-  elementsContainer.prepend(newCard);
+  return newCard;
 }
 
 
-function render() {
-  initialCards.reverse().forEach(renderCard);
+function render(card) {
+  elementsContainer.prepend(createCard(card));
 }
 
-render();
+function renderCardsFromArray() {
+  initialCards.reverse().forEach(render);
+}
+renderCardsFromArray()
+
 
 profileEditButton.addEventListener('click', openEditPopup);
 popupButtonCloseProfile.addEventListener('click', () => { closePopup(popupProfile) });
