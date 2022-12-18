@@ -53,13 +53,28 @@ const initialCards = [
 
 
 function openPopup(popup) {
+  document.addEventListener('keydown', closePopupEscape);
   popup.classList.add('popup_open')
 }
 
 
 function closePopup(popup) {
+  document.removeEventListener('keydown', closePopupEscape);
   popup.classList.remove('popup_open')
 }
+
+function closePopupOverlay(evt) {
+  if (evt.target === evt.currentTarget) {
+    closePopup(evt.target);
+}
+};
+
+function closePopupEscape(evt) {
+  if (evt.key === 'Escape') {
+    const openPopup = document.querySelector('.popup_open');
+    closePopup(openPopup);
+  }
+};
 
 function openEditPopup() {
   openPopup(popupProfile);
@@ -123,7 +138,7 @@ function render(card) {
 function renderCardsFromArray() {
   initialCards.reverse().forEach(render);
 }
-renderCardsFromArray()
+renderCardsFromArray();
 
 
 profileEditButton.addEventListener('click', openEditPopup);
@@ -134,3 +149,7 @@ profileAddButton.addEventListener('click', () => { openPopup(popupAddCard) });
 popupButtonCloseCard.addEventListener('click', () => { closePopup(popupAddCard) });
 popupFormAddCard.addEventListener('submit', addCard);
 popupImageCloseButton.addEventListener('click', () => { closePopup(popupImages) });
+
+popupProfile.addEventListener('click', closePopupOverlay);
+popupImages.addEventListener('click', closePopupOverlay);
+popupAddCard.addEventListener('click',closePopupOverlay);

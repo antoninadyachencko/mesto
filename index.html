@@ -47,10 +47,12 @@
         <form class="form form_profile" name="edit-ptofile" novalidate autocomplete="off">
           <label class="popup__label" for="profile"></label>
           <input type="text" class="form__text-input" name="profile" id="profile" value="Жак-Ив Кусто" placeholder="Имя"
-            required>
+          minlength="2"  maxlength="40" required>
+          <span id="profile-error" class="popup__error"></span>
           <label class="popup__label" for="description"></label>
           <input type="text" class="form__text-input" name="description" id="description" value="Исследователь океана"
-            placeholder="Деятельность" required>
+            placeholder="Деятельность"  minlength="2"  maxlength="200" required>
+            <span id="description-error" class="popup__error"></span>
           <button class="form__button-save form__button-save_profile" type="submit">Сохранить</button>
         </form>
       </div>
@@ -63,11 +65,13 @@
         <form class="form form_card" name="add-elements" novalidate autocomplete="off">
           <label class="popup__label" for="card-place"></label>
           <input type="text" class="form__text-input" id="card-place" name="place" value="" placeholder="Название"
-            required>
+          minlength="2"  maxlength="30" required>
+          <span id="card-place-error" class="popup__error"></span>
           <label class="popup__label" for="card-link"></label>
-          <input type="text" class="form__text-input" id="card-link" name="link" value=""
+          <input type="url" class="form__text-input" id="card-link" name="link" value=""
             placeholder="Ссылка на картинку" required>
-          <button class="form__button-save form__button-save_card" type="submit">Создать</button>
+          <span id="card-link-error" class="popup__error"></span>
+          <button class="form__button-save form__button-save_card form__button-save_disabled" type="submit">Создать</button>
         </form>
       </div>
     </section>
@@ -93,7 +97,9 @@
     </template>
 
   </div>
+  <script src="./scripts/validate.js"></script>
   <script src="./scripts/index.js"></script>
+ 
 </body>
 
 </html>
