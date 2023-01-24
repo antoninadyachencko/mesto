@@ -39,7 +39,7 @@
     </footer>
 
 
-    <section class="popup popup_profile">
+    <div class="popup popup_profile">
       <div class="popup__container">
         <button class="popup__button-close popup__button-close_profile" type="button"
           aria-label="Закрыть окно"></button>
@@ -56,9 +56,9 @@
           <button class="form__button-save form__button-save_profile" type="submit">Сохранить</button>
         </form>
       </div>
-    </section>
+    </div>
 
-    <section class="popup popup_card">
+    <div class="popup popup_card">
       <div class="popup__container">
         <button class="popup__button-close popup__button-close_card" aria-label="Закрыть окно" type="button"></button>
         <h2 class="popup__title">Новое место</h2>
@@ -74,15 +74,15 @@
           <button class="form__button-save form__button-save_card form__button-save_disabled" type="submit">Создать</button>
         </form>
       </div>
-    </section>
+    </div>
 
-    <section class="popup popup_images">
+    <div class="popup popup_images">
       <div class="popup__container-images">
         <button id="image-Button" class="popup__button-close popup__button-close_image" type="button"></button>
         <img class="popup__image" src="#" alt=".">
         <p class="popup__image-text"></p>
       </div>
-    </section>
+    </div>
 
 
     <template id="elements_template">
@@ -97,9 +97,9 @@
     </template>
 
   </div>
+  <script src="./scripts/data.js"></script>
   <script src="./scripts/validate.js"></script>
   <script src="./scripts/index.js"></script>
- 
 </body>
 
 </html>
