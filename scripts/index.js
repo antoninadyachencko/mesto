@@ -30,8 +30,6 @@ function openPopup(popup) {
 
 
 function closePopup(popup) {
-  popupFormAddCard.reset();
-  resetValidation();
   document.removeEventListener('keydown', closePopupEscape);
   popup.classList.remove('popup_open')
 };
@@ -71,6 +69,7 @@ function addCard(event) {
   render(newCard);
   closePopup(popupAddCard);
   popupFormAddCard.reset();
+  resetValidation();
 };
 
 function openCard(click) {
